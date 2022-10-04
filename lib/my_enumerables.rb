@@ -8,8 +8,8 @@ module Enumerable
     map { |item| block.call item}
   end
 
-  def my_none
-    
+  def my_none?(&block)
+    none? { |item| block.call item}
   end
 
   def my_select
