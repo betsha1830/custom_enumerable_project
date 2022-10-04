@@ -24,8 +24,8 @@ end
 class Array
   # Define my_each here
 
-  def my_all?
-    
+  def my_all?(&block)
+    all?{|item| block.call item}
   end
 
   def my_any?
