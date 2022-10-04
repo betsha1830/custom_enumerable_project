@@ -1,7 +1,7 @@
 module Enumerable
   # Your code goes here
-  def my_inject
-
+  def my_inject(val, &block)
+    inject(val) { |var1, var2| block.call var1, var2 }
   end
 
   def my_map(&block)
@@ -25,11 +25,11 @@ class Array
   # Define my_each here
 
   def my_all?(&block)
-    all?{|item| block.call item}
+    all?{ |item| block.call item}
   end
 
   def my_any?(&block)
-    any?{|item| block.call item}
+    any?{ |item| block.call item}
   end
 
   def my_count(&block)
