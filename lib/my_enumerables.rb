@@ -12,8 +12,8 @@ module Enumerable
     none? { |item| block.call item}
   end
 
-  def my_select
-
+  def my_select(&block)
+    select { |item| block.call item}
   end
 end
 
