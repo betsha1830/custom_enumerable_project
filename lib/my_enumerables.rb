@@ -28,8 +28,8 @@ class Array
     all?{|item| block.call item}
   end
 
-  def my_any?
-
+  def my_any?(&block)
+    any?{|item| block.call item}
   end
 
   def my_count
