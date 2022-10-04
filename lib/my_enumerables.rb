@@ -4,12 +4,12 @@ module Enumerable
 
   end
 
-  def my_map
-
+  def my_map(&block)
+    map { |item| block.call item}
   end
 
   def my_none
-
+    
   end
 
   def my_select
