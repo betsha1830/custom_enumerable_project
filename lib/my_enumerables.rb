@@ -32,8 +32,8 @@ class Array
     any?{|item| block.call item}
   end
 
-  def my_count
-
+  def my_count(&block)
+    block_given? ? count{ |item| block.call item} : count{ |item| item}
   end
 
   def my_each(&block)
