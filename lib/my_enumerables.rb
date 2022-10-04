@@ -40,8 +40,8 @@ class Array
     each { |item| block.call item}
   end
 
-  def my_each_with_index
-
+  def my_each_with_index(&block)
+    each_with_index { |item, index| block.call item, index}
   end
 
 end
